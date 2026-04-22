@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Soressa Kumela — AI, Machine Learning & Python Developer. Building intelligent solutions with neural networks, predictive modeling, and cutting-edge algorithms." />
+  <meta name="keywords" content="AI Developer, Machine Learning Engineer, Python Developer, Data Scientist, Portfolio" />
+  <meta name="author" content="Soressa Kumela" />
+  <title>Soressa Kumela | AI, Machine Learning & Python Developer</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <!-- Phosphor Icons -->
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.0.3/src/regular/style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.0.3/src/bold/style.css" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Mouse Glow Follower -->
+  <div id="mouse-glow" aria-hidden="true"></div>
+
+  <!-- ════════════════════════════════════════════ NAVBAR ════════════════════════════════════════════ -->
+  <header id="navbar" class="navbar">
+    <nav class="navbar__inner container">
+      <a href="#hero" class="navbar__logo" id="nav-logo">SK<span class="logo-slash">/</span><span class="logo-bracket">&gt;</span></a>
+
+      <ul class="navbar__links" id="nav-links">
+        <li><a href="#about" class="nav-link" data-nav>About</a></li>
+        <li><a href="#skills" class="nav-link" data-nav>Skills</a></li>
+        <li><a href="#projects" class="nav-link" data-nav>Projects</a></li>
+        <li><a href="#contact" class="nav-link" data-nav>Contact</a></li>
+        <li><a href="#" class="nav-link nav-resume-btn" id="resume-btn">Resume</a></li>
+      </ul>
+
+      <button class="navbar__hamburger" id="hamburger-btn" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- ════════════════════════════════════════════ HERO ════════════════════════════════════════════ -->
+  <section id="hero" class="hero">
+    <canvas id="neural-canvas" aria-hidden="true"></canvas>
+    <div class="hero__content container">
+      <p class="hero__greeting"><span class="code-accent">&lt;</span> Hi, I'm <span class="code-accent">/&gt;</span></p>
+      <h1 class="hero__name">Soressa Kumela</h1>
+      <div class="hero__typing-wrapper">
+        <span class="hero__typing-prefix">I'm a&nbsp;</span>
+        <span class="hero__typed-text" id="typed-text"></span>
+        <span class="hero__cursor" id="typing-cursor">|</span>
+      </div>
+      <p class="hero__subtext">
+        I leverage data, algorithms, and deep learning architectures to build intelligent, production-ready solutions. 
+        From predictive models to scalable APIs, I turn complex problems into elegant AI-powered systems.
+      </p>
+      <div class="hero__actions">
+        <a href="#projects" class="btn btn--primary" id="hero-projects-btn">View Projects</a>
+        <a href="#contact" class="btn btn--outline" id="hero-contact-btn">Contact Me</a>
+      </div>
+    </div>
+    <div class="hero__scroll-indicator" aria-hidden="true">
+      <span class="scroll-line"></span>
+      <span class="scroll-text">Scroll</span>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════ ABOUT ════════════════════════════════════════════ -->
+  <section id="about" class="section about">
+    <div class="container">
+      <h2 class="section__title reveal-element">
+        <span class="section__number">01.</span> About Me
+      </h2>
+      <div class="about__grid reveal-element">
+        <div class="about__text">
+          <p>
+            I'm a passionate AI and Machine Learning developer with deep expertise in designing, training, and deploying 
+            intelligent systems that solve real-world problems. My work spans across <strong>Neural Networks</strong>, 
+            <strong>Predictive Modeling</strong>, <strong>Computer Vision</strong>, and <strong>Natural Language Processing</strong>. 
+            I specialize in architecting end-to-end ML pipelines—from raw data ingestion and feature engineering to model 
+            optimization and production deployment.
+          </p>
+          <p>
+            Beyond model development, I'm deeply invested in <strong>Data Engineering</strong> and <strong>Automation</strong>. 
+            I build robust, scalable backend services using Python and FastAPI, containerize deployments with Docker, 
+            and ensure that every system I create is not just accurate but also performant and maintainable. I believe 
+            that the best AI solutions live at the intersection of rigorous mathematics, clean engineering, and an 
+            obsessive attention to detail.
+          </p>
+        </div>
+        <div class="about__stats">
+          <div class="stat-card reveal-element">
+            <span class="stat-card__number">15+</span>
+            <span class="stat-card__label">ML Models Deployed</span>
+          </div>
+          <div class="stat-card reveal-element">
+            <span class="stat-card__number">50+</span>
+            <span class="stat-card__label">Projects Completed</span>
+          </div>
+          <div class="stat-card reveal-element">
+            <span class="stat-card__number">98%</span>
+            <span class="stat-card__label">Client Satisfaction</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════ SKILLS ════════════════════════════════════════════ -->
+  <section id="skills" class="section skills">
+    <div class="container">
+      <h2 class="section__title reveal-element">
+        <span class="section__number">02.</span> Skills & Technologies
+      </h2>
+      <div class="skills__grid">
+        <div class="skill-pill reveal-element" data-skill="Python">
+          <i class="ph ph-code"></i> Python
+        </div>
+        <div class="skill-pill reveal-element" data-skill="TensorFlow">
+          <i class="ph ph-brain"></i> TensorFlow
+        </div>
+        <div class="skill-pill reveal-element" data-skill="PyTorch">
+          <i class="ph ph-lightning"></i> PyTorch
+        </div>
+        <div class="skill-pill reveal-element" data-skill="Scikit-Learn">
+          <i class="ph ph-chart-line-up"></i> Scikit-Learn
+        </div>
+        <div class="skill-pill reveal-element" data-skill="Pandas">
+          <i class="ph ph-table"></i> Pandas
+        </div>
+        <div class="skill-pill reveal-element" data-skill="NumPy">
+          <i class="ph ph-math-operations"></i> NumPy
+        </div>
+        <div class="skill-pill reveal-element" data-skill="SQL">
+          <i class="ph ph-database"></i> SQL
+        </div>
+        <div class="skill-pill reveal-element" data-skill="FastAPI">
+          <i class="ph ph-rocket-launch"></i> FastAPI
+        </div>
+        <div class="skill-pill reveal-element" data-skill="Git">
+          <i class="ph ph-git-branch"></i> Git
+        </div>
+        <div class="skill-pill reveal-element" data-skill="Docker">
+          <i class="ph ph-cube"></i> Docker
+        </div>
+        <div class="skill-pill reveal-element" data-skill="OpenCV">
+          <i class="ph ph-eye"></i> OpenCV
+        </div>
+        <div class="skill-pill reveal-element" data-skill="Keras">
+          <i class="ph ph-atom"></i> Keras
+        </div>
+        <div class="skill-pill reveal-element" data-skill="NLP">
+          <i class="ph ph-chat-text"></i> NLP
+        </div>
+        <div class="skill-pill reveal-element" data-skill="MLOps">
+          <i class="ph ph-gear-six"></i> MLOps
+        </div>
+        <div class="skill-pill reveal-element" data-skill="AWS">
+          <i class="ph ph-cloud"></i> AWS
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════ PROJECTS ════════════════════════════════════════════ -->
+  <section id="projects" class="section projects">
+    <div class="container">
+      <h2 class="section__title reveal-element">
+        <span class="section__number">03.</span> Featured Models & Projects
+      </h2>
+      <div class="projects__grid">
+
+        <!-- Project 1 -->
+        <article class="project-card reveal-element" id="project-1">
+          <div class="project-card__header">
+            <i class="ph ph-chart-line-up project-card__icon"></i>
+            <div class="project-card__links">
+              <a href="#" class="project-card__link" aria-label="GitHub Repository" title="GitHub"><i class="ph-bold ph-github-logo"></i></a>
+              <a href="#" class="project-card__link" aria-label="Live Demo" title="Live Demo"><i class="ph-bold ph-arrow-square-out"></i></a>
+            </div>
+          </div>
+          <h3 class="project-card__title">Predictive Market Model</h3>
+          <p class="project-card__desc">
+            An LSTM-based deep learning model for financial time-series forecasting. Achieves 87% directional accuracy 
+            on S&P 500 daily returns using multi-variate feature engineering with technical indicators and sentiment data.
+          </p>
+          <div class="project-card__tags">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">TensorFlow</span>
+            <span class="tech-tag">Pandas</span>
+            <span class="tech-tag">LSTM</span>
+          </div>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="project-card reveal-element" id="project-2">
+          <div class="project-card__header">
+            <i class="ph ph-eye project-card__icon"></i>
+            <div class="project-card__links">
+              <a href="#" class="project-card__link" aria-label="GitHub Repository" title="GitHub"><i class="ph-bold ph-github-logo"></i></a>
+              <a href="#" class="project-card__link" aria-label="Live Demo" title="Live Demo"><i class="ph-bold ph-arrow-square-out"></i></a>
+            </div>
+          </div>
+          <h3 class="project-card__title">Computer Vision Object Detection</h3>
+          <p class="project-card__desc">
+            Real-time object detection pipeline built on YOLOv8 architecture. Trained on a custom dataset of 12,000+ 
+            annotated images achieving 94.2% mAP@0.5 for autonomous navigation use cases.
+          </p>
+          <div class="project-card__tags">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">PyTorch</span>
+            <span class="tech-tag">OpenCV</span>
+            <span class="tech-tag">YOLOv8</span>
+          </div>
+        </article>
+
+        <!-- Project 3 -->
+        <article class="project-card reveal-element" id="project-3">
+          <div class="project-card__header">
+            <i class="ph ph-chat-text project-card__icon"></i>
+            <div class="project-card__links">
+              <a href="#" class="project-card__link" aria-label="GitHub Repository" title="GitHub"><i class="ph-bold ph-github-logo"></i></a>
+              <a href="#" class="project-card__link" aria-label="Kaggle Notebook" title="Kaggle"><i class="ph-bold ph-arrow-square-out"></i></a>
+            </div>
+          </div>
+          <h3 class="project-card__title">NLP Sentiment Analyzer</h3>
+          <p class="project-card__desc">
+            A transformer-based sentiment analysis engine fine-tuned on 50K+ product reviews. Uses BERT embeddings 
+            with a custom classification head, reaching 96.1% F1-score on multi-class sentiment classification.
+          </p>
+          <div class="project-card__tags">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">HuggingFace</span>
+            <span class="tech-tag">BERT</span>
+            <span class="tech-tag">NLP</span>
+          </div>
+        </article>
+
+        <!-- Project 4 -->
+        <article class="project-card reveal-element" id="project-4">
+          <div class="project-card__header">
+            <i class="ph ph-robot project-card__icon"></i>
+            <div class="project-card__links">
+              <a href="#" class="project-card__link" aria-label="GitHub Repository" title="GitHub"><i class="ph-bold ph-github-logo"></i></a>
+              <a href="#" class="project-card__link" aria-label="Live Demo" title="Live Demo"><i class="ph-bold ph-arrow-square-out"></i></a>
+            </div>
+          </div>
+          <h3 class="project-card__title">AI Chatbot Engine</h3>
+          <p class="project-card__desc">
+            A production-grade conversational AI built with Retrieval-Augmented Generation (RAG). Integrates vector 
+            databases with LLM inference to provide context-aware responses with sub-200ms latency at scale.
+          </p>
+          <div class="project-card__tags">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">FastAPI</span>
+            <span class="tech-tag">LangChain</span>
+            <span class="tech-tag">Docker</span>
+          </div>
+        </article>
+
+        <!-- Project 5 -->
+        <article class="project-card reveal-element" id="project-5">
+          <div class="project-card__header">
+            <i class="ph ph-activity project-card__icon"></i>
+            <div class="project-card__links">
+              <a href="#" class="project-card__link" aria-label="GitHub Repository" title="GitHub"><i class="ph-bold ph-github-logo"></i></a>
+              <a href="#" class="project-card__link" aria-label="Kaggle Notebook" title="Kaggle"><i class="ph-bold ph-arrow-square-out"></i></a>
+            </div>
+          </div>
+          <h3 class="project-card__title">Healthcare Diagnostics ML</h3>
+          <p class="project-card__desc">
+            Ensemble machine learning system for early disease prediction using patient clinical data. Combines 
+            XGBoost, Random Forest, and neural nets with SHAP explainability to assist clinical decision-making.
+          </p>
+          <div class="project-card__tags">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">Scikit-Learn</span>
+            <span class="tech-tag">XGBoost</span>
+            <span class="tech-tag">SHAP</span>
+          </div>
+        </article>
+
+        <!-- Project 6 -->
+        <article class="project-card reveal-element" id="project-6">
+          <div class="project-card__header">
+            <i class="ph ph-graph project-card__icon"></i>
+            <div class="project-card__links">
+              <a href="#" class="project-card__link" aria-label="GitHub Repository" title="GitHub"><i class="ph-bold ph-github-logo"></i></a>
+              <a href="#" class="project-card__link" aria-label="Live Demo" title="Live Demo"><i class="ph-bold ph-arrow-square-out"></i></a>
+            </div>
+          </div>
+          <h3 class="project-card__title">Automated Data Pipeline</h3>
+          <p class="project-card__desc">
+            End-to-end ETL pipeline orchestrating data extraction from 10+ sources, automated feature engineering, 
+            and model retraining with drift detection. Deployed on AWS with CI/CD and real-time monitoring dashboards.
+          </p>
+          <div class="project-card__tags">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">SQL</span>
+            <span class="tech-tag">AWS</span>
+            <span class="tech-tag">Docker</span>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════ CONTACT ════════════════════════════════════════════ -->
+  <section id="contact" class="section contact">
+    <div class="container">
+      <h2 class="section__title reveal-element">
+        <span class="section__number">04.</span> Get In Touch
+      </h2>
+      <p class="contact__headline reveal-element">Let's build the future with AI.</p>
+      <p class="contact__subtext reveal-element">
+        Whether you have a project in mind, want to collaborate on research, or just want to say hi—my inbox is always open.
+      </p>
+      <form class="contact__form reveal-element" id="contact-form" autocomplete="off">
+        <div class="form-group">
+          <input type="text" id="form-name" name="name" required placeholder=" " />
+          <label for="form-name">Your Name</label>
+          <span class="form-line"></span>
+        </div>
+        <div class="form-group">
+          <input type="email" id="form-email" name="email" required placeholder=" " />
+          <label for="form-email">Your Email</label>
+          <span class="form-line"></span>
+        </div>
+        <div class="form-group form-group--full">
+          <textarea id="form-message" name="message" rows="4" required placeholder=" "></textarea>
+          <label for="form-message">Your Message</label>
+          <span class="form-line"></span>
+        </div>
+        <button type="submit" class="btn btn--primary btn--submit" id="form-submit-btn">
+          Send Message <i class="ph ph-paper-plane-tilt"></i>
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════ FOOTER ════════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__socials">
+        <a href="#" class="footer__social-link" aria-label="GitHub" id="social-github"><i class="ph-bold ph-github-logo"></i></a>
+        <a href="#" class="footer__social-link" aria-label="LinkedIn" id="social-linkedin"><i class="ph-bold ph-linkedin-logo"></i></a>
+        <a href="#" class="footer__social-link" aria-label="Twitter / X" id="social-twitter"><i class="ph-bold ph-x-logo"></i></a>
+        <a href="#" class="footer__social-link" aria-label="Kaggle" id="social-kaggle"><i class="ph-bold ph-chart-bar"></i></a>
+      </div>
+      <p class="footer__copy">
+        <span class="code-accent">&lt;</span> Designed & Built by <strong>Soressa Kumela</strong> <span class="code-accent">/&gt;</span>
+      </p>
+      <p class="footer__year">&copy; <span id="footer-year"></span> — All Rights Reserved</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
